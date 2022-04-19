@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import './App.css';
+import getAllFloridaParksData from '../apiCalls.js'
 import Nav from '../Nav/Nav'
+
 
 class App extends Component{
   constructor() {
@@ -10,11 +12,13 @@ class App extends Component{
     }
   }
 
-  render() {
+  // componentDidMount() {
+  //   getAllFloridaParksData()
+  // }
 
+  render() {
     return (
       <div className="App">
-        <h1> heyyyyy</h1>
         <Nav />
       </div>
     );
