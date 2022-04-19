@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './App.css';
+import Nav from '../Nav/Nav'
 
 class App extends Component{
   constructor() {
@@ -14,6 +15,7 @@ class App extends Component{
     return (
       <div className="App">
         <h1> heyyyyy</h1>
+        <Nav />
       </div>
     );
   }
