@@ -10,7 +10,7 @@ const getSingleParkData = (parkCode) => {
   .then(data => console.log(data))
 }
 
-const handleResponse = () => {
+const handleResponse = (response) => {
   if(!response.ok) {
     throw new Error('Something went wrong!')
   } else {
