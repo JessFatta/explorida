@@ -1,0 +1,15 @@
+.single-park-details {
+  border: 1px solid black;
+  height: 10rem;
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+  background: yellow;
+}
+
+.single-park-page {
+  border: 2px solid salmon;
+  height: 100vh;
+  display: flex;
+
+}
