@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import {getSingleParkData } from '../apiCalls'
 import './SinglePark.css'
 
@@ -19,7 +20,7 @@ class SinglePark extends Component {
       <section className='single-park-page'>
         <article className='single-park-details'>
           <div className='single-park-text'>
-            {/* <p>{this.state.singlePark.fullName}</p> */}
+            <p>{this.state.singlePark.fullName}</p>
           </div>
         </article>
       </section>
