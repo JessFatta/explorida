@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Route } from 'react-router-dom'
 import './App.css';
 import { getAllFloridaParksData, getSingleParkData } from '../apiCalls.js'
 import AllParks from '../AllParks/AllParks'
@@ -31,8 +32,16 @@ class App extends Component {
     return (
       <div className="App">
         <Nav />
-        <AllParks parks={this.state.parks} />
-        <SinglePark parkCode={this.mapParks()} />
+        <Route exact path='/' render={() => {
+          return (
+            <AllParks parks={this.state.parks} />
+
+          )
+        }} />
+        <Route exact path='/:fullName' render={({match}) => {
+          let name = parseInt(match.params.fullName)
+          return <SinglePark parkCode={this.mapParks()} singleParkName={name} />
+        }} />
       </div>
     );
   }
