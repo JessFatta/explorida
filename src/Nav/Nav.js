@@ -4,7 +4,7 @@ import './Nav.css'
 const Nav = () => {
   return (
     <div className='nav-container'>
-      <h1>Explorida</h1>
+      <div className='title'>Explorida</div>
     </div>
   )
 }
