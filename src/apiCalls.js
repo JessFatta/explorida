@@ -7,7 +7,7 @@ const getAllFloridaParksData = () => {
 const getSingleParkData = (parkCode) => {
   return fetch(`https://developer.nps.gov/api/v1/parks?parkCode=${parkCode}&api_key=ikJQlV6Nf6rZWouLdPDfsJ4IG0kFDzKuSgMrFvLw`)
   .then(response => response.json())
-  .then(data => console.log(data))
+  //.then(data => console.log(data))
 }
 
 const handleResponse = (response) => {
@@ -18,4 +18,4 @@ const handleResponse = (response) => {
   }
 }
 
-export default getAllFloridaParksData
+export { getAllFloridaParksData, getSingleParkData }
