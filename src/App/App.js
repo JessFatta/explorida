@@ -1,25 +1,29 @@
 import React, { Component } from 'react'
 import './App.css';
 import getAllFloridaParksData from '../apiCalls.js'
+import AllParks from '../AllParks/AllParks'
 import Nav from '../Nav/Nav'
 
 
-class App extends Component{
+class App extends Component {
   constructor() {
     super()
     this.state = {
-      ideas: []
+      parks: []
     }
   }
 
-  // componentDidMount() {
-  //   getAllFloridaParksData()
-  // }
+  componentDidMount() {
+    getAllFloridaParksData()
+    .then(data => this.setState({parks: data.data}))
+    console.log(this.state.parks)
+  }
 
   render() {
     return (
       <div className="App">
         <Nav />
+        <AllParks parks={this.state.parks} />
       </div>
     );
   }
