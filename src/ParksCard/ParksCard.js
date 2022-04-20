@@ -6,7 +6,7 @@ const ParksCard = ({image, fullName}) => {
   return (
     <div className='parks-card'>
       <Link to={`/${fullName}`} >
-      <img src={image[1].url} alt={`${fullName}'s image`} className='parks-card-image' />
+      <img src={image[0].url} alt={`${fullName}'s image`} className='parks-card-image' />
       <p>{fullName}</p>
       </Link>
     </div>
