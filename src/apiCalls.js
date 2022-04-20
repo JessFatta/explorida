@@ -1,7 +1,7 @@
 const getAllFloridaParksData = () => {
   return fetch('https://developer.nps.gov/api/v1/parks?stateCode=fl&api_key=ikJQlV6Nf6rZWouLdPDfsJ4IG0kFDzKuSgMrFvLw')
   .then(response => response.json())
-  .then(data => console.log(data))
+  //.then(data => console.log(data))
 }
 
 const getSingleParkData = (parkCode) => {
