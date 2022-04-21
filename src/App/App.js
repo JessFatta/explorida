@@ -12,47 +12,35 @@ class App extends Component {
     super()
     this.state = {
       parks: [],
-      singlePark: ''
+      error: null
+      //singlePark: []
     }
   }
 
   componentDidMount() {
     getAllFloridaParksData()
     .then(data => this.setState({parks: data.data}))
-    .then(() => this.mapParks())
-  }
-
-  mapParks() {
-    let allParkCodes = this.state.parks.map(park => {
-      return park.parkCode
-    })
-    console.log(allParkCodes)
-
-    let oneCode = allParkCodes.filter(code => {
-      console.log(code)
-      return code === code
-    })
-    console.log(oneCode)
-    this.setState({singlePark: oneCode})
-    //console.log(this.state.singlePark)
-    //return oneCode
-    // getSingleParkData(oneCode)
+    .catch(error => this.setState({error: error}))
+    //.then(() => this.mapParks())
+    // this.mapParks()
     // .then(data => this.setState({singlePark: data}))
-    // .then(() => console.log(this.state.singlePark))
-
+    
   }
 
-  // displayPark(code) {
-  //   const eachPark = this.state.singlePark.filter(park => park.parkCode === code)
-  //   this.setState({singlePark: eachPark})
-  //   console.log(this.state.singlePark)
-  // }
+  // mapParks = () => {
+  //   let allParkCodes = this.state.parks.map(park => {
+  //     return park.parkCode
+  //   })
+  //   console.log(allParkCodes)
 
-  // displayPark(parkCode) {
-  //   let findCode = this.state.parks.find(code => code.code === parkCode)
-  //   console.log(findCode)
-  //   // getSingleParkData(`${findCode}`)
-  //   // .then(data => this.setState({singlePark: data.data}))
+  //   let oneCode = allParkCodes.filter(code => {
+  //     console.log(code)
+  //     return code === code
+  //   })
+  //   console.log(oneCode)
+    
+  //   //return oneCode
+
   // }
 
 
@@ -60,15 +48,15 @@ class App extends Component {
     return (
       <div className="App">
         <Nav />
+        {this.state.error && <h2>{this.state.error.message}</h2>}
         <Route exact path='/' render={() => {
           return (
             <AllParks parks={this.state.parks} parkCode={this.state.singlePark}  />
           )
         }} />
         <Route path='/:parkCode' render={({match}) => {
-          let id = this.state.parks.find(code => code === match.params.parkCode)
-
-          return <SinglePark parkCode={this.state.singlePark}  />
+          let parkToRender = this.state.parks.find(park => park.parkCode === match.params.parkCode)
+          return <SinglePark {...parkToRender} parkToRender={parkToRender} parkCode={this.state.singlePark} allParkCodes={this.mapParks}/>
         }} />
       </div>
     );
