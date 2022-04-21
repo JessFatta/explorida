@@ -1,16 +1,17 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import './ParksCard.css'
 
-const ParksCard = ({image, fullName}) => {
+const ParksCard = ({image, parkCode, id, fullName, displayPark}) => {
   return (
-    <div className='parks-card'>
-      <Link to={`/${fullName}`} >
-      <img src={image[0].url} alt={`${fullName}'s image`} className='parks-card-image' />
+    <div className='parks-card'  >
+      <NavLink to={`/${parkCode}`}>
+      <img src={image[1].url} alt={`${fullName}'s image`} className='parks-card-image' />
       <p>{fullName}</p>
-      </Link>
+      </NavLink>
     </div>
   )
 }
+//onClick={(event) => displayPark(event.target.value)} 
 
 export default ParksCard
