@@ -8,20 +8,22 @@
   grid-template-columns: repeat(3, 1fr);*/
   /* grid-gap: 1px;  */
   /* border: 1px solid red;  */
-  padding-top: 1rem;
-  padding-bottom: 2rem;
+  /* padding-top: 12%;
+  padding-bottom: .5%; */
   background: #cfc7c6e8;
   border-radius: 3px;
   border: 1px solid yellow;
-  padding: 1rem;
+  padding-top: 1rem;
 }
 
 .parks-card-image {
   box-shadow: 10px 14px 14px rgba(46, 32, 32, 0.1);
   cursor: pointer;
   border-radius: 3px;
-  height: 16.5rem;
-  width: 17.5rem;
+  /* height: 67%; responsive but not sized better
+  width: 85%; */
+  height: 12rem;
+  width: 15rem;
   border: 1px solid green;
 }
 
