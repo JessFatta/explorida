@@ -51,16 +51,18 @@ class App extends Component {
         {this.state.error && <h2>{this.state.error.message}</h2>}
         <Route exact path='/' render={() => {
           return (
-            <AllParks parks={this.state.parks} parkCode={this.state.singlePark}  />
+            <AllParks parks={this.state.parks}  />
           )
         }} />
         <Route path='/:parkCode' render={({match}) => {
           let parkToRender = this.state.parks.find(park => park.parkCode === match.params.parkCode)
-          return <SinglePark {...parkToRender} parkToRender={parkToRender} parkCode={this.state.singlePark} allParkCodes={this.mapParks}/>
+          return <SinglePark {...parkToRender} parkToRender={parkToRender}  />
         }} />
       </div>
     );
   }
 }
+
+//parkCode={this.state.singlePark} was passed as props to singlePark but i dont think i need
 
 export default App;
