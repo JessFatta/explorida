@@ -1,15 +1,25 @@
-.single-park-details {
-  border: 1px solid black;
-  height: 10rem;
-  display: flex;
-  /* justify-content: center; */
-  /* align-items: center; */
-  background: yellow;
-}
-
 .single-park-page {
   border: 2px solid salmon;
   height: 100vh;
   display: flex;
+  justify-content: space-around;;
+  align-items: center;
+}
 
+.single-park-details {
+  border: 1px solid black;
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  /* align-items: center; */
+  background: #cfc7c6e8;
+}
+
+.single-park-image {
+  display: flex;
+  height: 10rem;
+  border: 1px solid red;
+  align-items: center;
+  background: #cfc7c6e8;
 }
