@@ -9,7 +9,8 @@
 
 .single-park-details {
   border: 1px solid black;
-  height: 10rem;
+  height: 20rem;
+  width: 50rem;
   display: flex;
   align-items: center;
   /* justify-content: center; */
