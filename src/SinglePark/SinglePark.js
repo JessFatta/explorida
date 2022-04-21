@@ -13,24 +13,19 @@ class SinglePark extends Component {
   }
 
   componentDidMount() {
-    getSingleParkData(`${this.props.parkCode}`)
-    .then(data => this.setState({singlePark: data}))
-    .then(() => console.log('HIII', this.state.singlePark))
-    .then(() => console.log('HEY', this.props.parkCode))
+    //console.log(this.props.parkToRender)
+
+    getSingleParkData(`${this.props.parkToRender}`)
+    .then(() => this.setState({singlePark: this.props.parkToRender}))
+    .then(() => console.log(this.state.singlePark))
+    // getSingleParkData(`${this.props.parkCode}`)
+    // .then(data => console.log(data))
+    //.then(data => this.setState({singlePark: data.data}))
+    //.then(() => console.log('HIII', this.state.singlePark))
+    //.then(() => console.log('HEY', this.props.allParkCodes()))
   }
 
-  // displayPark(parkCode) {
-  //   console.log(this.props.parkCode)
-  //   let findCode = this.props.parkCode.find(code => code.code === parkCode)
-  //   console.log(findCode)
-  //   // getSingleParkData(`${findCode}`)
-  //   // .then(data => this.setState({singlePark: data.data}))
-  // }
 
-  // displayParkDetails() {
-  //   this.getParkCodes()
-  //   .then((data) => this.setState({singlePark: data}))
-  // }
 
 
   render() {
@@ -38,15 +33,15 @@ class SinglePark extends Component {
       <section className='single-park-page'>
         <article className='single-park-image'>
           <div className='single-park-img-details'>
-            <p>hey</p>
-            <p>image here</p>
+            <p>{this.state.singlePark.fullName}</p>
+            {/* <img src={this.state.singlePark.images[0].url} /> */}
             <p>image details here</p>
           </div>
         </article>
         <article className='single-park-details'>
           <div className='single-park-text'>
-            <p>yo</p>
-            <p>heyyy</p>
+            <p>{this.state.singlePark.description}</p>
+            <p>{this.state.singlePark.directionsInfo}</p>
             <p>helloooooooooo</p>
           </div>
         </article>
