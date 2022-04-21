@@ -9,10 +9,13 @@ const AllParks = ({parks}) => {
         image={park.images}
         fullName={park.fullName}
         key={park.id}
-        id={park.id}
+        id={park.parkCode}
+        parkCode={park.parkCode}
       />
     )
   })
+
+
 
   return (
     <div className='all-parks-wrapper'>
