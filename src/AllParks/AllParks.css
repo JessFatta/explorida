@@ -1,13 +1,15 @@
 .all-parks-container {
-  padding: 20px;
-  padding: 20px;
+  /* padding: 1%; */
+  padding: 1rem;
+  padding-bottom: 3rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1rem;
+  grid-gap: 1%;
   border: 1px solid purple;
 }
 
 .all-parks-wrapper {
   display: flex;
   flex-direction: column;
+  border: 1px solid red;
 }
