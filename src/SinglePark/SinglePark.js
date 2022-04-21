@@ -7,22 +7,15 @@ class SinglePark extends Component {
   constructor() {
     super()
     this.state = {
-      singlePark: '',
-      //parks: []
+      singlePark: [],
     }
   }
 
-  componentDidMount() {
+  componentDidMount () {
     //console.log(this.props.parkToRender)
-
     getSingleParkData(`${this.props.parkToRender}`)
     .then(() => this.setState({singlePark: this.props.parkToRender}))
-    .then(() => console.log(this.state.singlePark))
-    // getSingleParkData(`${this.props.parkCode}`)
-    // .then(data => console.log(data))
-    //.then(data => this.setState({singlePark: data.data}))
-    //.then(() => console.log('HIII', this.state.singlePark))
-    //.then(() => console.log('HEY', this.props.allParkCodes()))
+    //.then(() => console.log(this.state.singlePark))
   }
 
 
@@ -34,15 +27,15 @@ class SinglePark extends Component {
         <article className='single-park-image'>
           <div className='single-park-img-details'>
             <p>{this.state.singlePark.fullName}</p>
-            {/* <img src={this.state.singlePark.images[0].url} /> */}
-            <p>image details here</p>
+            {/* <img src={this.state.singlePark.images.url} /> */}
+            <p>{this.state.singlePark.designation}</p> 
           </div>
         </article>
         <article className='single-park-details'>
           <div className='single-park-text'>
             <p>{this.state.singlePark.description}</p>
             <p>{this.state.singlePark.directionsInfo}</p>
-            <p>helloooooooooo</p>
+            <p>{this.state.singlePark.weatherInfo}</p>
           </div>
         </article>
       </section>
