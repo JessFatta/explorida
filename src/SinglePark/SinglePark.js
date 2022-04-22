@@ -28,17 +28,17 @@ class SinglePark extends Component {
         <article className='single-park-image'>
           <div className='single-park-img-details'>
             <p>{this.state.singlePark.fullName}</p>
-            <img className='individual-image' src={this.props.images[0].url} />
-            <p>{this.state.singlePark.designation}</p> 
+            <img className='individual-image' src={this.props.images[0].url} alt={this.props.images[0].altText} />
+            <p>{this.props.images[0].caption}</p>
           </div>
         </article>
         <article className='single-park-details'>
           <div className='single-park-text'>
-            <p>Info about {this.state.singlePark.fullName}: </p>
+            <p><b>Info about {this.state.singlePark.fullName}: </b></p>
             <p>{this.state.singlePark.description}</p>
-            <p>Location:</p>
+            <p><b>Location:</b></p>
             <p>{this.state.singlePark.directionsInfo}</p>
-            <p>Weather Info:</p>
+            <p><b>Weather Info:</b></p>
             <p>{this.state.singlePark.weatherInfo}</p>
           </div>
         </article>
