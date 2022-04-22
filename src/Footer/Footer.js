@@ -9,7 +9,6 @@ const Footer = () => {
       <p className="footer-text">|</p>
       <p className="footer-text">Surrender to the Flo...</p>
     </footer>
-
   )
 }
 
