@@ -1,0 +1,19 @@
+.all-parks-container {
+  padding: 1rem;
+  padding-bottom: 3rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1%;
+}
+
+.all-parks-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.explore-all-parks {
+  background: -webkit-linear-gradient(#5e7a63, #21343d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #0000001a;
+    font-size: 4vh;
+}

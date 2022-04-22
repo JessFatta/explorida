@@ -1,0 +1,17 @@
+.nav-container {
+  background: #cfc7c6e8;
+  height: 5.5rem;
+}
+
+.title {
+  background: -webkit-linear-gradient(#123668, #70b4d5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #0000001a;
+  font-size: 6vh;
+}
+
+
+a :hover {
+  transition: 0.3s;
+  transform: scale(1.05);
+}

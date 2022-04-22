@@ -1,0 +1,8 @@
+.filtered-parks-container {
+  padding: 1rem;
+  padding-bottom: 3rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1%;
+  height: 62vh;
+}
