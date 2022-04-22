@@ -1,6 +1,6 @@
 .single-park-page {
   /* border: 2px solid salmon; */
-  height: 150vh;
+  height: 120vh;
   display: flex;
   justify-content: space-around;
   flex-direction: column;
@@ -8,24 +8,23 @@
 }
 
 .single-park-details {
-  border: 1px solid black;
-  height: 23rem;
+  /* border: 1px solid black; */
+  height: 26rem;
   width: 50rem;
   display: flex;
   align-items: center;
-  /* justify-content: center; */
-  /* align-items: center; */
+  /* justify-content: center;
+  align-items: center; */
   background: #cfc7c6e8;
   padding: .5rem;
   border-radius: 3px;
   box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.666);
-
 }
 
 .single-park-image {
   display: flex;
   height: 22rem;
-  width: 23rem;
+  width: 27rem;
   /* border: 1px solid red; */
   align-items: center;
   background: #cfc7c6e8;
@@ -34,18 +33,16 @@
   justify-content: center;
   border-radius: 3px;
   box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.666);
-
 }
 
 .single-park-text {
-  /* border: 1px solid green; */
   height: 24rem;
   width: 50rem;
 }
 
 .individual-image {
   height: 16rem;
-  width: 19rem;
+  width: 21rem;
   border-radius: 3px;
   box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.666);
 
