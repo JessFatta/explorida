@@ -5,13 +5,11 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1%;
-  /* border: 1px solid purple; */
 }
 
 .all-parks-wrapper {
   display: flex;
   flex-direction: column;
-  /* border: 1px solid red; */
 }
 
 .explore-all-parks {
@@ -19,5 +17,4 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: #0000001a;
     font-size: 4vh;
-    
 }
