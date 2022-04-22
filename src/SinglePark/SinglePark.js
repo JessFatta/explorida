@@ -11,15 +11,10 @@ class SinglePark extends Component {
     }
   }
 
-  componentDidMount () {
-    //console.log(this.props.parkToRender)
+  componentDidMount() {
     getSingleParkData(`${this.props.parkToRender}`)
     .then(() => this.setState({singlePark: this.props.parkToRender}))
-    //.then(() => console.log(this.state.singlePark))
   }
-
- 
-
 
 
   render() {
