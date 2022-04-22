@@ -1,0 +1,16 @@
+footer {
+  height: 8vh;
+  width: 100%;
+  display: flex;
+  border: 2px solid rgba(255, 255, 255, 0.113);
+  background: #cfc7c6e8;
+  color: black;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  bottom: 0%;
+}
+
+.footer-text {
+  margin: 0% 5% 0% 5%;
+}
