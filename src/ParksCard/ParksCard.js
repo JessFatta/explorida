@@ -2,7 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import './ParksCard.css'
 
-const ParksCard = ({image, parkCode, id, fullName}) => {
+const ParksCard = ({image, parkCode, fullName}) => {
   return (
     <div className='parks-card'  >
       <NavLink to={`/${parkCode}`}>
