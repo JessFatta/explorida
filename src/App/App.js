@@ -5,7 +5,7 @@ import { getAllFloridaParksData, getSingleParkData } from '../apiCalls.js'
 import AllParks from '../AllParks/AllParks'
 import Nav from '../Nav/Nav'
 import SinglePark from '../SinglePark/SinglePark'
-import FilterActivities from '../FilterActivities/FilterActivities';
+import FilteredParks from '../FilteredParks/FilteredParks';
 import Footer from '../Footer/Footer';
 
 
@@ -16,7 +16,7 @@ class App extends Component {
       parks: [],
       error: null,
       filteredParks: [],
-      selectedActivity: null
+      selectedDesignation: null,
       //singlePark: []
     }
   }
@@ -25,33 +25,36 @@ class App extends Component {
     getAllFloridaParksData()
     .then(data => this.setState({parks: data.data}))
     .catch(error => this.setState({error: error}))
-    //.then(() => this.mapParks())
-    // this.mapParks()
-    // .then(data => this.setState({singlePark: data}))
+
     
   }
 
-  getActivities = async (parks) => {
-    const mappedActivities = []
-    for(const parks of parks.activities) {
-      const singlePark = await getSingleParkData()
-      parks.activities = parks.activities.url
-      mappedActivities.push(parks.activities)
-    }
-    this.setState({filteredParks: mappedActivities })
-    console.log(this.state.filteredActivities)
-  }
-
-  // filterActivities = (activity) => {
-  //   if (activity === 'All') {
-  //     this.setState({filteredParks: this.state.parks, selectedActivity: null})
-  //     return
-  //   }
-
-  //   const filteredParks = this.state.parks.filter(park => park.activities.includes(activity))
-  //   this.setState({filteredParks: filteredParks, selectedActivity: activity})
+  // getActivities = async (parks) => {
+  //   const mappedActivities = []
+  //   for(const park of parks)
   // }
 
+
+  // getActivities = async (parks) => {
+  //   const mappedActivities = []
+  //   for(const parks of parks.activities) {
+  //     const singlePark = await getSingleParkData()
+  //     parks.activities = parks.activities.url
+  //     mappedActivities.push(parks.activities)
+  //   }
+  //   this.setState({filteredParks: mappedActivities })
+  //   console.log(this.state.filteredActivities)
+  // }
+
+  getDesignation = (designation) => {
+    if (designation === 'All') {
+      this.setState({filteredParks: this.state.parks, selectedDesignation: null})
+      return
+    }
+    
+    const filtered = this.state.parks.filter(park => park.designation.includes(designation))
+    this.setState({filteredParks: filtered, selectedDesignation: designation})
+  }
 
   // mapParks = () => {
   //   let allParkCodes = this.state.parks.map(park => {
@@ -73,11 +76,16 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Nav filteredActivities={this.filteredActivities}/>
+        <Nav getDesignation={this.getDesignation}/>
         {this.state.error && <h2>{this.state.error.message}</h2>}
         <Route exact path='/' render={() => {
           return (
-            <AllParks parks={this.state.parks}  />
+            <div>
+              {this.state.selectedDesignation ? 
+              
+              <FilteredParks designation={this.state.selectedDesignation} filteredParks={this.state.filteredParks}/> :
+              <AllParks parks={this.state.parks}  />}
+            </div>
           )
         }} />
         <Route path='/:parkCode' render={({match}) => {
