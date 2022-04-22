@@ -31,15 +31,16 @@ class App extends Component {
     
   }
 
-  // getActivities = async (activities) => {
-  //   const mappedActivities = []
-  //   for(const activity of activities.activities) {
-  //     const singlePark = await getSingleParkData()
-  //     activity.activities = park.activities.name
-  //     mappedActivities.push(activity)
-  //   }
-  //   this.setState({filteredParks: mappedActivities })
-  // }
+  getActivities = async (parks) => {
+    const mappedActivities = []
+    for(const parks of parks.activities) {
+      const singlePark = await getSingleParkData()
+      parks.activities = parks.activities.url
+      mappedActivities.push(parks.activities)
+    }
+    this.setState({filteredParks: mappedActivities })
+    console.log(this.state.filteredActivities)
+  }
 
   // filterActivities = (activity) => {
   //   if (activity === 'All') {
@@ -69,15 +70,6 @@ class App extends Component {
   // }
 
 
-  // mapForImages = () => {
-  //   let getImages = this.state.parks.find(park => {
-  //     return park.images[0].url
-  //   })
-  //   console.log(getImages)
-  //   return getImages[0]
-  // }
-
-
   render() {
     return (
       <div className="App">
@@ -90,7 +82,7 @@ class App extends Component {
         }} />
         <Route path='/:parkCode' render={({match}) => {
           let parkToRender = this.state.parks.find(park => park.parkCode === match.params.parkCode)
-          return <SinglePark {...parkToRender} parkToRender={parkToRender}  mapForImages={this.mapForImages}/>
+          return <SinglePark {...parkToRender} parkToRender={parkToRender}  />
         }} />
         <Footer />
       </div>
