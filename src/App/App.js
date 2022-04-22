@@ -29,23 +29,6 @@ class App extends Component {
     
   }
 
-  // getActivities = async (parks) => {
-  //   const mappedActivities = []
-  //   for(const park of parks)
-  // }
-
-
-  // getActivities = async (parks) => {
-  //   const mappedActivities = []
-  //   for(const parks of parks.activities) {
-  //     const singlePark = await getSingleParkData()
-  //     parks.activities = parks.activities.url
-  //     mappedActivities.push(parks.activities)
-  //   }
-  //   this.setState({filteredParks: mappedActivities })
-  //   console.log(this.state.filteredActivities)
-  // }
-
   getDesignation = (designation) => {
     if (designation === 'All') {
       this.setState({filteredParks: this.state.parks, selectedDesignation: null})
@@ -55,22 +38,6 @@ class App extends Component {
     const filtered = this.state.parks.filter(park => park.designation.includes(designation))
     this.setState({filteredParks: filtered, selectedDesignation: designation})
   }
-
-  // mapParks = () => {
-  //   let allParkCodes = this.state.parks.map(park => {
-  //     return park.parkCode
-  //   })
-  //   console.log(allParkCodes)
-
-  //   let oneCode = allParkCodes.filter(code => {
-  //     console.log(code)
-  //     return code === code
-  //   })
-  //   console.log(oneCode)
-    
-  //   //return oneCode
-
-  // }
 
 
   render() {
