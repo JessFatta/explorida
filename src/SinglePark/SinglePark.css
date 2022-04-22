@@ -1,6 +1,6 @@
 .single-park-page {
   /* border: 2px solid salmon; */
-  height: 100vh;
+  height: 150vh;
   display: flex;
   justify-content: space-around;
   flex-direction: column;
@@ -9,7 +9,7 @@
 
 .single-park-details {
   border: 1px solid black;
-  height: 20rem;
+  height: 23rem;
   width: 50rem;
   display: flex;
   align-items: center;
@@ -21,9 +21,23 @@
 
 .single-park-image {
   display: flex;
-  height: 10rem;
+  height: 22rem;
+  width: 23rem;
   border: 1px solid red;
   align-items: center;
   background: #cfc7c6e8;
   padding: .5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.single-park-text {
+  border: 1px solid green;
+  height: 24rem;
+  width: 50rem;
+}
+
+.individual-image {
+  height: 16rem;
+  width: 19rem;
 }
