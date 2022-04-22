@@ -1,0 +1,11 @@
+.designation {
+  box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.666);
+  /* border: 1px solid red; */
+  background-color: rgb(236, 230, 230);
+}
+
+.designation-filter {
+  /* border: 1px solid green; */
+  /* display: flex; */
+  /* flex-direction: column; */
+}
