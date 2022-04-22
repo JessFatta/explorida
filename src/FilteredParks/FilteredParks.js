@@ -1,5 +1,6 @@
 import React from 'react'
 import ParksCard from '../ParksCard/ParksCard'
+import './FilteredParks.css'
 
 
 const FilteredParks = ({filteredParks, designation}) => {
@@ -20,7 +21,7 @@ const FilteredParks = ({filteredParks, designation}) => {
   return (
     <div className='all-parks-wrapper'>
       <h2 className='explore-all-parks'>{designation}</h2>
-      <div className='all-parks-container'>
+      <div className='filtered-parks-container'>
         {filteredParksCards}
       </div>
     </div>
