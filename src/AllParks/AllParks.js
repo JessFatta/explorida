@@ -19,7 +19,7 @@ const AllParks = ({parks}) => {
 
   return (
     <div className='all-parks-wrapper'>
-      <h2>All Parks</h2>
+      <h2 className='explore-all-parks'>Explore Florida's Parks</h2>
       <div className='all-parks-container'>
         {parkCards}
       </div>
