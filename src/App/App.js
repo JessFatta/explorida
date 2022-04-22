@@ -17,7 +17,6 @@ class App extends Component {
       error: null,
       filteredParks: [],
       selectedDesignation: null,
-      //singlePark: []
     }
   }
 
@@ -25,8 +24,6 @@ class App extends Component {
     getAllFloridaParksData()
     .then(data => this.setState({parks: data.data}))
     .catch(error => this.setState({error: error}))
-
-    
   }
 
   getDesignation = (designation) => {
@@ -64,7 +61,5 @@ class App extends Component {
     );
   }
 }
-
-//parkCode={this.state.singlePark} was passed as props to singlePark but i dont think i need
 
 export default App;
