@@ -18,6 +18,13 @@ class SinglePark extends Component {
     //.then(() => console.log(this.state.singlePark))
   }
 
+  // mapForImages = () => {
+  //   let getImages = this.state.singlePark.find(park => {
+  //     return park.images[0].url
+  //   })
+  //   console.log(getImages)
+  //   return getImages[0]
+  // }
 
 
 
@@ -27,6 +34,13 @@ class SinglePark extends Component {
         <article className='single-park-image'>
           <div className='single-park-img-details'>
             <p>{this.state.singlePark.fullName}</p>
+            {/* <div>
+              {this.state.singlePark.find(park => {
+                return <img src={park.images[0].url} />
+              })}
+            </div> */}
+            {/* <img src={this.props.mapForImages()}/> */}
+            {/* <img src={() => this.mapForImages()}/> */}
             {/* <img src={this.state.singlePark.images.url} /> */}
             <p>{this.state.singlePark.designation}</p> 
           </div>
@@ -44,3 +58,7 @@ class SinglePark extends Component {
 }
 
 export default SinglePark
+
+/* <div className='current-park-image' style={{backgroundImage: url(this.mapForImages())}}>
+</div> */
+
