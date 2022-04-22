@@ -13,3 +13,10 @@
   flex-direction: column;
   /* border: 1px solid red; */
 }
+
+.explore-all-parks {
+  background: -webkit-linear-gradient(#5e7a63, #21343d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #0000001a;
+    font-size: 4vh;
+}
