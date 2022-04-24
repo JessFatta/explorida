@@ -10,7 +10,6 @@ describe('Main', () => {
     .should('be.visible')
   })
   it('As a user, I should visit the page and see parks cards with names', () => {
-    // cy.visit('http://localhost:3000/')
     cy.intercept('GET', "https://developer.nps.gov/api/v1/parks?*", {
       statusCode: 200,
       fixture: 'parks.json'
@@ -57,12 +56,4 @@ describe('Main', () => {
     .should('contain', '©2022 Explorida by Jess Fatta')
     .should('contain', 'Surrender to the Flo...')
   })
-
-  // it('As a user, I should be able to click a park card and route to a different page to see more details', () => {
-  //   cy.intercept('GET', "https://developer.nps.gov/api/v1/parks?*", {
-  //     statusCode: 200,
-  //     fixture: 'parks.json'
-  //   }).as('matchedUrl')
-  //   cy.visit('http://localhost:3000/')
-  // })
 })
