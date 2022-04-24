@@ -48,7 +48,7 @@ class App extends Component {
               {this.state.selectedDesignation ? 
               
               <FilteredParks designation={this.state.selectedDesignation} filteredParks={this.state.filteredParks}/> :
-              <AllParks parks={this.state.parks}  />}
+              <AllParks parks={this.state.parks} />}
             </div>
           )
         }} />
