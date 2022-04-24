@@ -13,14 +13,19 @@ This was a solo [project](https://frontend.turing.edu/projects/module-3/showcase
 - The user can select a park which will take them to a new page that displays the parks's details
 - At any time, the user can click the page title to return to the homepage
 
-Home page and park details:
+Home page:
 
-![]()
+![](https://media.giphy.com/media/rMJbk7siUFQxgStens/giphy.gif)
 
 
-Filtering by designation:
+Filtering by Designation:
 
-![]()
+![](https://media.giphy.com/media/w2QaFG2bRorBKTqGnx/giphy.gif)
+
+
+Single Park Details: 
+
+![](https://media.giphy.com/media/fSobh3HL5wCuSM5VGr/giphy.gif)
 
 
 
