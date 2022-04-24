@@ -1,0 +1,7 @@
+{
+"data": [{
+"fullName": "Biscayne National Park",
+"images": [{"url": "AMadeupPark.jpg"}, {"url": "Another.jpg"}],
+"parkCode": "bisc"
+}]
+}
