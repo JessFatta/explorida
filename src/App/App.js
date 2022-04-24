@@ -41,7 +41,7 @@ class App extends Component {
     return (
       <div className="App">
         <Nav getDesignation={this.getDesignation}/>
-        {this.state.error && <h2>{this.state.error.message}</h2>}
+        {this.state.error && <h2 className='loading-error-message'>{this.state.error.message}</h2>}
         <Route exact path='/' render={() => {
           return (
             <div>
