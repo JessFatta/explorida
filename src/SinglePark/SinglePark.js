@@ -22,18 +22,18 @@ class SinglePark extends Component {
       <section className='single-park-page'>
         <article className='single-park-image'>
           <div className='single-park-img-details'>
-            <p>{this.state.singlePark.fullName}</p>
+            <p className='full-name-single-view'>{this.state.singlePark.fullName}</p>
             <img className='individual-image' src={this.props.images[0].url} alt={this.props.images[0].altText} />
             <p>{this.props.images[0].caption}</p>
           </div>
         </article>
         <article className='single-park-details'>
           <div className='single-park-text'>
-            <p><b>Info about {this.state.singlePark.fullName}: </b></p>
+            <p className='info'><b>Info about {this.state.singlePark.fullName}: </b></p>
             <p>{this.state.singlePark.description}</p>
-            <p><b>Location:</b></p>
+            <p className='location'><b>Location:</b></p>
             <p>{this.state.singlePark.directionsInfo}</p>
-            <p><b>Weather Info:</b></p>
+            <p className='weather'><b>Weather Info:</b></p>
             <p>{this.state.singlePark.weatherInfo}</p>
           </div>
         </article>
