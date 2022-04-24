@@ -41,14 +41,14 @@ class App extends Component {
     return (
       <div className="App">
         <Nav getDesignation={this.getDesignation}/>
-        {this.state.error && <h2>{this.state.error.message}</h2>}
+        {this.state.error && <h2 className='loading-error-message'>{this.state.error.message}</h2>}
         <Route exact path='/' render={() => {
           return (
             <div>
               {this.state.selectedDesignation ? 
               
               <FilteredParks designation={this.state.selectedDesignation} filteredParks={this.state.filteredParks}/> :
-              <AllParks parks={this.state.parks}  />}
+              <AllParks parks={this.state.parks} />}
             </div>
           )
         }} />

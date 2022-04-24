@@ -56,4 +56,14 @@ describe('Main', () => {
     .should('contain', '©2022 Explorida by Jess Fatta')
     .should('contain', 'Surrender to the Flo...')
   })
+
+  it('As a user, if the server is down, I will see an error', () => {
+    cy.intercept('GET', 'https://developer.nps.gov/api/v1/parks?*', {
+        statusCode: 400,
+        ok: false
+      }).as('matchedUrl')
+      cy.visit('http://localhost:3000/')
+      .get('h2[class="loading-error-message"]')
+      .contains('Something went wrong!')
+})
 })

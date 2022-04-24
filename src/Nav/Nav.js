@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom'
 import FilterForm from '../FilterForm/FilterForm'
 import './Nav.css'
@@ -15,3 +16,7 @@ const Nav = ({getDesignation}) => {
 }
 
 export default Nav
+
+Nav.propTypes = {
+  getDesignation: PropTypes.func.isRequired
+}

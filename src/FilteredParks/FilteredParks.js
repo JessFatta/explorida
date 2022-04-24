@@ -1,5 +1,6 @@
 import React from 'react'
 import ParksCard from '../ParksCard/ParksCard'
+import PropTypes from 'prop-types';
 import './FilteredParks.css'
 
 
@@ -16,8 +17,6 @@ const FilteredParks = ({filteredParks, designation}) => {
     )
   })
 
-
-
   return (
     <div className='all-parks-wrapper'>
       <h2 className='explore-all-parks'>{designation}</h2>
@@ -29,3 +28,8 @@ const FilteredParks = ({filteredParks, designation}) => {
 }
 
 export default FilteredParks
+
+FilteredParks.propTypes = {
+  filteredParks: PropTypes.arrayOf(),
+  designation: PropTypes.string.isRequired
+}

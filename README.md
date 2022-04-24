@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# Explorida
+-------
+### Overview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Explordia is the final solo project of Turing's Mod 3 inning. In this project, we were given full creative freedom to create a React app using any API we desire. Because I am a Florida local who loves the outdoors, I decided to use the National Parks Service API in order to create an application that revolves around Florida's beautiful National Parks, Preserves, Seashores, Monuments, Memorials, and Ecological & Historical Preserves.
 
-## Available Scripts
+This application allows the user to browse all that Florida's parks has to offer and gives insight on its designation, park info, weather info, and directions. The user is also able to see all parks or filter by designation.
 
-In the project directory, you can run:
+This was a solo [project](https://frontend.turing.edu/projects/module-3/showcase.html) and is built using React, React Router, JavaScript, CSS, PropTypes and utilizes Test Driven Developement and End-to-End testing with Cypress.
 
-### `npm start`
+- The user can visit the home page to view all the parks at once 
+- The user can also use the dropdown menu and select a specific designation which will display all parks of that designation
+- The user can select a park which will take them to a new page that displays the parks's details
+- At any time, the user can click the page title to return to the homepage
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Home page and park details:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![]()
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Filtering by designation:
 
-### `npm run build`
+![]()
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---------
+### Installation Instructions
+ - Fork and Clone [this](https://github.com/JessFatta/explorida) repository
+ - `CD` into the directory
+ - Run `npm install` 
+ - Run `npm start`
+ - In your browser, go to [this link](http://localhost:3000/)
 
-### `npm run eject`
+-----------
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Future Features
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+ - Responsive Design
+ - Dark/Light mode
+ - Add functionality to allow users to favorite a park
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---------
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Contributors
 
-## Learn More
+Jessica Fatta | [GitHub](https://github.com/JessFatta)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+--------
+### Links
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Repository Link: [🌴](https://github.com/JessFatta/explorida)
 
-### Code Splitting
+------------
+### Technologies Used
+ This application was built using React, React Router, JavaScript, PropTypes, and CSS and utilizes Test Driven Development and End-to-End testing with Cypress.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+------------
+### Learning Goals
+To solidify and demonstrate the understanding of:
+- Building an application using React
+- Create a multi-page application with React Router that changes the URL for a better user experience
+- Cypress and End-to-End testing
