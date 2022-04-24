@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 import ParksCard from '../ParksCard/ParksCard'
 import './AllParks.css'
 
@@ -25,4 +26,13 @@ const AllParks = ({parks}) => {
   )
 }
 
+
 export default AllParks
+
+AllParks.propTypes = {
+  parks: PropTypes.objectOf(PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    fullName: PropTypes.string.isRequired,
+    }
+  ))
+}
