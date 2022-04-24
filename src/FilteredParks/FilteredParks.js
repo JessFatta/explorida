@@ -16,8 +16,6 @@ const FilteredParks = ({filteredParks, designation}) => {
     )
   })
 
-
-
   return (
     <div className='all-parks-wrapper'>
       <h2 className='explore-all-parks'>{designation}</h2>
