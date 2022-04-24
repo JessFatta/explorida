@@ -33,6 +33,15 @@ AllParks.propTypes = {
   parks: PropTypes.objectOf(PropTypes.shape({
     id: PropTypes.string.isRequired,
     fullName: PropTypes.string.isRequired,
-    }
+    key: PropTypes.string.isRequired,
+    parkCode: PropTypes.string.isRequired,
+    images: PropTypes.arrayOf(PropTypes.shape({
+      altText: PropTypes.string.isRequired,
+      caption: PropTypes.string.isRequired,
+      credit: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      url:  PropTypes.string.isRequired
+    })).isRequired
+  }
   ))
 }
