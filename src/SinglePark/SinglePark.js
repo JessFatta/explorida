@@ -8,12 +8,14 @@ class SinglePark extends Component {
     super()
     this.state = {
       singlePark: [],
+      error: null
     }
   }
 
   componentDidMount() {
     getSingleParkData(`${this.props.parkToRender}`)
     .then(() => this.setState({singlePark: this.props.parkToRender}))
+    .catch(error => this.setState({error: error}))
   }
 
 
