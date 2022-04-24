@@ -15,8 +15,6 @@ const AllParks = ({parks}) => {
     )
   })
 
-
-
   return (
     <div className='all-parks-wrapper'>
       <h2 className='explore-all-parks'>Explore Florida's Parks</h2>
