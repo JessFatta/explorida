@@ -13,6 +13,8 @@ This was a solo [project](https://frontend.turing.edu/projects/module-3/showcase
 - The user can select a park which will take them to a new page that displays the parks's details
 - At any time, the user can click the page title to return to the homepage
 
+Deploy link: [🐬](https://explorida.herokuapp.com/)
+
 Home page:
 
 ![](https://media.giphy.com/media/rMJbk7siUFQxgStens/giphy.gif)
