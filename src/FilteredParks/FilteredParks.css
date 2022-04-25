@@ -6,3 +6,23 @@
   grid-gap: 1%;
   height: 62vh;
 }
+
+@media screen and (max-width: 1400px) {
+  .filtered-parks-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
+@media screen and (max-width: 1000px) {
+  .filtered-parks-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+@media screen and (max-width: 700px) {
+  .filtered-parks-container {
+    grid-template-columns: repeat(1, 1fr);
+    margin-bottom: 15rem;
+  }
+
+}
