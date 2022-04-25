@@ -17,3 +17,23 @@
     -webkit-text-fill-color: #0000001a;
     font-size: 4vh;
 }
+
+@media screen and (max-width: 1400px) {
+  .all-parks-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
+@media screen and (max-width: 1000px) {
+  .all-parks-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+@media screen and (max-width: 700px) {
+  .all-parks-container {
+    grid-template-columns: repeat(1, 1fr);
+    margin-bottom: 15rem;
+  }
+
+}
