@@ -41,3 +41,23 @@
   border-radius: 3px;
   box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.666);
 }
+
+
+@media screen and (max-width: 700px) {
+  .single-park-details {
+    height: 47rem;
+    width: 20rem;
+  }
+  .single-park-page {
+    height: 150vh;
+  }
+  
+  .single-park-text {
+    height: 43.5rem;
+    width: 20rem;
+  }
+
+  .single-park-image {
+    width: 20rem;
+  }
+  }
