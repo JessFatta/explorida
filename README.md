@@ -47,7 +47,6 @@ Responsive Design:
 
 ### Future Features
 
- - Responsive Design
  - Dark/Light mode
  - Add functionality to allow users to favorite a park
 
