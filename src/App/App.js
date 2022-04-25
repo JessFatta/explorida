@@ -46,16 +46,15 @@ class App extends Component {
           return (
             <div>
               {this.state.selectedDesignation ? 
-              
               <FilteredParks designation={this.state.selectedDesignation} filteredParks={this.state.filteredParks}/> :
               <AllParks parks={this.state.parks} />}
             </div>
           )
         }} />
         <Route path='/:parkCode' render={({match}) => {
-          let parkToRender = this.state.parks.find(park => park.parkCode === match.params.parkCode)
+          let parkToRender = this.state.parks.find(park => park.parkCode === match.params.parkCode) 
           return <SinglePark {...parkToRender} parkToRender={parkToRender}  />
-        }} />
+        }} /> 
         <Footer />
       </div>
     );
