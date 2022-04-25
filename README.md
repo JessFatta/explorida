@@ -30,6 +30,9 @@ Single Park Details:
 
 ![](https://media.giphy.com/media/fSobh3HL5wCuSM5VGr/giphy.gif)
 
+Responsive Design:
+
+![](https://media.giphy.com/media/5CAz1inxxhge0PU5zZ/giphy.gif)
 
 
 ---------
